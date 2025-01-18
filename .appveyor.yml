@@ -1,11 +1,16 @@
-image: Ubuntu1804
-stack: node 20
+environment:
+  nodejs_version: "20"
+
 branches:
   only:
     - main
-cache: node_modules
+
+cache: node_modules  # кеширование
+
 install:
-  - npm install
-build: off
+  - npm install  # команда установки зависимостей
+
+build: off  # отключаем встроенную в appveyor систему сборки
+
 test_script:
-  - npm run lint && npm test
+  - npm run lint && npm test  # скрипт тестирования
