@@ -23,6 +23,6 @@ export default [...compat.extends("eslint:recommended"), {
         ecmaVersion: "latest",
         sourceType: "module",
     },
-
     rules: {},
+    ignores: ['node_modules/*']
 }];
